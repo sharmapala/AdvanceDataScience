@@ -1,3 +1,8 @@
+
+Working with Edgar datasets: Wrangling, 
+Pre-processing and Exploratory Data Analysis
+
+
 PROBLEM 1:
 In this part of the question, we have automated the generation of URL based on the CIK and Accession number.
 Once the URL is formed, all the 10-q links will be parsed and tables from the forms will be scraped and stored as individual tables which we have later zipped and pushed it to S3 bucket. 

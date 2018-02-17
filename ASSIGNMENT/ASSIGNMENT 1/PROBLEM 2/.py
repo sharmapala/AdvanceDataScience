@@ -53,7 +53,7 @@ parser = argparse.ArgumentParser(description='Please enter the values of below :
 parser.add_argument("--year", help = "Enter the year for which you need log file")
 parser.add_argument("--accessKey", help = "Enter access key of your amazon acc")
 parser.add_argument("--secretKey", help = "Enter secret key of your amazon acc")
-parser.add_argument("--Location", help = "Enter location to create bucket")
+#parser.add_argument("--Location", help = "Enter location to create bucket")
 args = parser.parse_args()#parser.add_argument("--s3loc",help="put the region you want to select for amazon s3")
 # parse_args() will typically be called with no arguments, and the ArgumentParser will automatically determine the command-line arguments from sys.argv.
 if not args.year:
@@ -65,13 +65,13 @@ if  not args.accessKey:
 if not args.secretKey:
     logger.warning("SecretKey input has been not provided,exiting the system")
     sys.exit(0)
-if not args.Location:
+#if not args.Location:
     logger.warning("Location input has been not provided,exiting the system")
     sys.exit(0)
 
 accessKey = args.accessKey
 secretKey = args.secretKey
-Location = args.Location
+#Location = args.Location
 
 year = args.year
 logger.info(year)
@@ -221,18 +221,18 @@ for file_ in allFiles:
      #   a = df.iloc[i]
       #  octects = a.str.split('.',expand = True)
        # o = octects.iloc[0,0]
-        #for int(o) in range(0,128):
+        #for o in range(0,128):
          #   ClassAlist.append(int(o))
-        #for int(o) in range(128,183):
+        #for o in range(128,183):
          #   ClassBlist.append(int(o))
-        #for int(o) in range(183,256):
+        #for o in range(183,256):
          #   Others.append(int(o))
     #if len(ClassAlist) > (len(ClassBlist) | len(Others)):
      #   logger.info("The Companies who have filled maximum are the ones having ClassA ips ")
     #if len(ClassBlist) > (len(ClassAlist) | len(Others)):                                                                       
      #   logger.info("The Companies who have filled maximum are the ones having ClassB ips ")
     #if len(Others) > (len(ClassBlist) | len(ClassAlist)):
-     #   logger.info("The Companies who have filled maximum are the ones having ClassC ips ")                                                                          
+     #   logger.info("The Companies who have filled maximum are the ones having ClassC ips ")                                                                            
 
 
     logger.info("Mean and Median sizes for each Browser")
@@ -249,7 +249,7 @@ for file_ in allFiles:
     data.reset_index(drop=True)
                     
 #Compute distinct count of ip per month i.e. per log file
-    ipcount_df = data['ip'].nunique()
+    ipcount_df = df['ip'].nunique()
     logger.info("Compute distinct count of ip per month i.e. per log file")
     print(ipcount_df)
                                                                                   
@@ -396,14 +396,28 @@ for file_ in allFiles:
     i = i+1
 
   
+#Making a zip file having the log file and the Graphical_images folder
+def make_zipfile(output_filename, source_dir):
+    relroot = os.path.abspath(os.path.join(source_dir, os.pardir))
+    with zipfile.ZipFile(output_filename, "w", zipfile.ZIP_DEFLATED) as zip:
+        for root, dirs, files in os.walk(source_dir):
+            # add directory (needed for empty dirs)
+            zip.write(root, os.path.relpath(root, relroot))
+            for file in files:
+                filename = os.path.join(root, file)
+                if os.path.isfile(filename): # regular files only
+                    arcname = os.path.join(os.path.relpath(root, relroot), file)
+                    zip.write(filename, arcname)
 
+make_zipfile(ADSAssign1Part2.zip,Graphical_images)
+print("Done")
 #---------------------------------------------------------------------------------------------#
-#uploading files to amazon s3 
+uploading files to amazon s3 
 '''BucketAlreadyOwnedByYou errors will only be returned outside of the US Standard region. 
-Inside the US Standard region (i.e. when you don't specify a location constraint), attempting to recreate a bucket you already own will succeed.'''
+Inside the US Standard region (i.e. when you don't specify a location constraint), attempting to recreate a bucket you #already own will succeed.'''
 try:
 
-    buck_name="ads-part2-assign"
+    buck_name="ads-part2-assignment"
 
     S3_client = boto3.client('s3', Location, aws_access_key_id= accessKey, aws_secret_access_key=secretKey)
     
@@ -417,10 +431,9 @@ try:
                 CreateBucketConfiguration={'LocationConstraint': Location},
             )
     logging.info("Connection is successful")
-    S3_client.upload_file("Graphical_images", buck_name, "Graphical_images")
-    S3_client.upload_file("'Log_file2.log'", buck_name, "'Log_file2.log'")
+    S3_client.upload_file("ADSAssign1Part2.zip", buck_name, "ADSAssign1Part2.zip")
+    S3_client.upload_file("Log_file2.log", buck_name, "Log_file2.log")
     logging.info("Files uploaded successfully")
 except Exception as e:
     logging.error("Error uploading files to Amazon s3" + str(e))
-
 

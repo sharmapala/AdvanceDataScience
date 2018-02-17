@@ -1,0 +1,26 @@
+To build and run locally:
+Commands for Problem 2 :
+
+1. Create  a docker file
+	vim dockerfile
+
+2. Build the image locally 
+	docker build -f dockerfile -t assignpart2
+
+3. Run the image
+	docker run -e year=yr -e accessKey=acckey -e secretKey=seckey -e 
+location=loc -ti assignpart2
+
+4. Tag the image 
+	docker tag <imageid> dhanisha/assignpart2:latest
+
+5. Push the image to docker hub 
+	docker push dhanisha/assignpart2
+
+6. To pull the image from hub
+	docker pull dhanisha/assignpart2
+
+7. To run the image that is pulled from the hub
+	docker run -e year=yr -e accessKey=acckey -e secretKey=seckey -e 
+locaiton=loc -ti dhanisha/assignpart2
+

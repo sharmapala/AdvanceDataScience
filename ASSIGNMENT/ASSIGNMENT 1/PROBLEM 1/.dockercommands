@@ -1,0 +1,26 @@
+For Problem 1 :
+
+To build and run the image locally
+1. create a docker file using below line
+	vim mydockerfile
+
+2. Build the image 
+	docker build -f mydockerfile -t assignpart1
+
+3. Run the image to create container
+	docker run -e CIK=cik -e Accession_number=accno -e 
+Access_key=acckey -e Secret_key=seckey -e Input_location=iloc -ti assignpart1
+
+4. Tag the image 
+	docker tag <image_id> dhanisha/assignpart1:latest
+
+5. Push the docker image to docker hub 
+	docker push dhanisha/assignpart1
+
+6. To pull the docker image from docker hub
+	docker pull dhanisha/assignpart1
+
+7. Run the image pulled from docker hub using following commands
+ 	docker run -e CIk=cik -e Accession_number=accno -e 
+Access_key=acckey -e Secret_key=seckey -e Input_location=iloc -ti 
+dhanisha/assignpart1  

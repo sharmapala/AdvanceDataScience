@@ -1,4 +1,4 @@
-# Model validation using Hyperparameter and Cross validation on Random Forest (Final selected model)
+# Model validation using Hyperparameter and Cross validation on Random Forest (Final selected model) and Final PIPELINE
 
 ### Hyper parameter
 Basic recipe for applying a supervised machine learning model:

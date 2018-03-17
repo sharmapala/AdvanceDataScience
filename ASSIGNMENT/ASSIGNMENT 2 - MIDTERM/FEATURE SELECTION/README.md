@@ -3,7 +3,7 @@
 <b>Once we are done with EDA and feature engineering , we need to now select which all features are important to be considered for modeling.
 Here are few methods that we have tried to come out with features that will provide with the best model output.<b>
 <ol>
-  <li><b> *Recursive Feature Elimination :* <b><br>
+  <li><b>Recursive Feature Elimination :<b><br>
 First , the model takes few features into iteration and in that iteration , it provides weights to each feature and in the next iteration it takes some other features and compare the weight of the first iteration with the next iteration and eliminate the variables based on these weights. The one with maximum weights will be given as output depending on the number of features we want.  
 <br>
 In this , I am fitting the X and Y in the model(which is linearRegresion()) . 

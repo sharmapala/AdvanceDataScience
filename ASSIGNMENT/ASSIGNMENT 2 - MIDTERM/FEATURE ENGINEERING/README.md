@@ -1,4 +1,4 @@
-# FEATURE ENGINEERING THAT WE USED :
+# FEATURE ENGINEERING TECHNIQUES THAT WE USED :
 
 <b>After performing Exploratory Data Analysis on our dataset we have a picture about
 the overall data. We know what variables occur most , at what time , what

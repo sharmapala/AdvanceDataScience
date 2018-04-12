@@ -1,0 +1,13 @@
+name: USER-INTERFACE
+title: USER-INTERFACE
+username:
+account: ads-final-project
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 321071
+bundleId: 1316207
+url: https://ads-final-project.shinyapps.io/USER-INTERFACE/
+when: 1523565632.51006
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: www/background.css|www/background2.css|www/New Text Document.txt|www/pic.jpg

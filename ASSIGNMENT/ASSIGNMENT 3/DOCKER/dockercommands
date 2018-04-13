@@ -1,1 +1,22 @@
+  DOCKER COMMANDS FOR PART 1 :
   
+  TO BUILD AND RUN THE DOCKER IMAGE LOCALLY :
+       vim dockerfile
+
+  TO BUILD THE IMAGE 
+       docker build -f dockerfile -t assign3
+       
+  TO RUN THE IMAGE TO CREATE CONTAINER 
+       docker run -e Access_key=Access_key -e Secret_key=Secret_key -ti assign3
+       
+  TO TAG THE IMAGE 
+       docker tag <image id> dhanisha/assign3
+       
+  TO PUSH THE DOCKER IMAGE TO DOCKER HUB
+       docker push dhanisha/assign3
+       
+  TO PULL THE DOCKER IMAGE FROM THE DOCKER HUB
+       docker pull dhanisha/assign3
+       
+  TO RUN THE IMAGE PULLED FROM DOCKER HUB 
+       docker run -e Access_key=Access_key -e Secret_key=Secret_key -ti assign3

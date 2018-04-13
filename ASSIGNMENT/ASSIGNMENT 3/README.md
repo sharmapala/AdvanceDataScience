@@ -8,3 +8,10 @@
 6. The pickle files and the error metrics csv file was then pushed to aws s3 bucket.
 7. The whole process was executed using <b>sklearn pipeline</b>.
 8. The jupyter file was then dockerised and the image was pushed to the <b>docker hub</b> which can be pulled and executed at any time.
+
+### PART 2 : MODEL DEPLOYEMNT 
+1. A user interface is created using <b>FLASK</b> framework which will take input from the user in 2 different formants.<br>
+    <b>a) A complete dataset</b><br>
+    <b>b) A row from the dataset to predict a value.<b>    
+2. The input given by the user will be given as the input to the pickle files that are uploaded to the s3 bucket which will predict the values and also compute the error metrics and that will be shown as the output to the user.
+3. The flask app will then dockerised and the image will be pushed to the docker hub from where the image can be pulled and executed.

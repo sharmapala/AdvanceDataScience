@@ -1,0 +1,66 @@
+<html>
+<title>Decay Coeienct App</title>
+<body>
+
+<form action = "/output" method="POST" id = "decay Coe prediction"> 
+                <div>
+                    <label for="name"># Lever position (lp)</label>
+                    <input type="number" id="1 - Lever position (lp) [ ]" name="predict_Lever position" value=>
+                
+                    <label for="name"># Ship speed (v) </label>
+                    <input type="number" id="2 - Ship speed (v) [knots]" name="predict_Ship speed" value=>
+                
+                    <label for="name"># Gas Turbine shaft torque (GTT)</label>
+                    <input type="number" id="3 - Gas Turbine shaft torque (GTT) [kN m]" name="predict_Gas Turbine shaft torque" value=>
+                
+                    <label for="name"># Gas Turbine rate of revolutions (GTn)</label>
+                    <input type="number" id="4 - Gas Turbine rate of revolutions (GTn) [rpm]" name="predict_Gas Turbine rate of revolutions" value=>
+                
+                    <label for="name"># Gas Generator rate of revolutions (GGn)</label>
+                    <input type="number" id="5 - Gas Generator rate of revolutions (GGn) [rpm]" name="predict_Gas Generator rate of revolutions " value=>
+                
+                    <label for="name"># Starboard Propeller Torque (Ts)</label>
+                    <input type="number" id="6 - Starboard Propeller Torque (Ts) [kN]" name="predict_Starboard Propeller Torque" value=>
+               
+                    <label for="name"># Port Propeller Torque (Tp)</label>
+                    <input type="number" id="7 - Port Propeller Torque (Tp) [kN]" name="predict_Port Propeller Torque" value=>
+               
+                    <label for="name"># HP Turbine exit temperature (T48)</label>
+                    <input type="number" id="8 - HP Turbine exit temperature (T48) [C]" name="predict_HP Turbine exit temperature" value=>
+              
+                    <label for="name"># GT Compressor inlet air temperature (T1) </label>
+                    <input type="number" id="9 - GT Compressor inlet air temperature (T1) [C]" name="predict_GT Compressor inlet air temperature" value=>
+                
+                    <label for="name"># GT Compressor outlet air temperature (T2)</label>
+                    <input type="number" id="10 - GT Compressor outlet air temperature (T2) [C]" name="predict_GT Compressor outlet air temperature" value=>
+                
+                    <label for="name"># HP Turbine exit pressure (P48)</label>
+                    <input type="number" id="11 - HP Turbine exit pressure (P48) [bar]" name="predict_(P48)" value=>
+               
+                    <label for="name"># GT Compressor inlet air pressure (P1)</label>
+                    <input type="number" id="12 - GT Compressor inlet air pressure (P1) [bar]" name="predict_(P1)" value=>
+                
+                    <label for="name"># GT Compressor outlet air pressure (P2)</label>
+                    <input type="number" id="13 - GT Compressor outlet air pressure (P2) [bar]" name="predict_(P2)" value=>
+                
+                    <label for="name"># Gas Turbine exhaust gas pressure (Pexh)</label>
+                    <input type="number" id="14 - Gas Turbine exhaust gas pressure (Pexh) [bar]" name="predict_(Pexh)" value=>
+                
+                    <label for="name"># Turbine Injecton Control (TIC)</label>
+                    <input type="number" id="15 - Turbine Injecton Control (TIC) [%]" name="predict_(TIC)" value=>
+                    <label for="name"># Fuel flow (mf)</label>
+                    <input type="number" id="16 - Fuel flow (mf) [kg/s]" name="predict_(mf)" value=>
+                    
+					<p> <input type ="submit" value="submit" /> </p>
+			</form>
+			
+			<div>{% if message %}
+				<p class="error"><strong>Message:</strong> {{ message }} </p>
+				{% endif %}
+			</div>
+            
+
+</body>
+</html>
+
+

@@ -24,9 +24,9 @@
 <i>
  1.The dataset in the form of csv is imported from the AWS cloud . The dataset as of now contains only 2008's data. (We are trying to include more years to that).<br>
  2.Three outputs are given to the user.<br>
-   a) Is the flight delayed or not? - This is predicted using Naive Bayes classification algorithm with a accuracy score of 96%.<br>
-   b) How much is the flight delayed at the origin airport and what is the arrival delay? - Predicted using RandomForestRegressor withe r2 score of 99%.<br
-   c) What type of delay is it ? - There are four delays [Carrier delay , Security delay , Weather delay , NAS delay] . This is predicted using RandomForestClassifier with accuracy of 89%.<br>
+ a) Is the flight delayed or not? - This is predicted using <b>Naive Bayes classification</b> algorithm with a accuracy score of 96%.<br>
+   b) How much is the flight delayed at the origin airport and what is the arrival delay? - Predicted using <b>RandomForestRegressor </b>withe r2 score of 99%.<br
+   c) What type of delay is it ? - There are four delays [Carrier delay , Security delay , Weather delay , NAS delay] . This is predicted using <b>RandomForestClassifier</b> with accuracy of 89%.<br>
  </i>
  
  ## WEEK 3 :

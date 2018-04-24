@@ -23,5 +23,6 @@
  
  ## WEEK 3 :
  <i>
- 1.The prediction model is deployed on cloud. 
+ 1.The prediction model is deployed on cloud. <br>
  2.The analysis is made with 2 years datasets.
+</i>

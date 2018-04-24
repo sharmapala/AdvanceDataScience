@@ -17,9 +17,9 @@
  a) Is the flight delayed or not? - This is predicted using <b>Naive Bayes classification</b> algorithm with a accuracy score of 96%.<br>
    b) How much is the flight delayed at the origin airport and what is the arrival delay? - Predicted using <b>RandomForestRegressor </b>withe r2 score of 99%.<br>
    c) What type of delay is it ? - There are four delays [Carrier delay , Security delay , Weather delay , NAS delay] . This is predicted using <b>RandomForestClassifier</b> with accuracy of 89%.<br>
- </i>
- d) Deployed the app using Flask on the id : http://ec2-54-69-18-165.us-west-2.compute.amazonaws.com/
+ d) Deployed the app using Flask on the id : http://ec2-54-69-18-165.us-west-2.compute.amazonaws.com/<br>
  e) Working on the app building on agile basis.
+ </i>
  
  ## WEEK 3 :
  1. Tuning of the parameters.

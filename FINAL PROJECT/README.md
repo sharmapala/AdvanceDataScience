@@ -22,5 +22,6 @@
  </i>
  
  ## WEEK 3 :
- 1. Tuning of the parameters.
- 2. Add more datasets to provide efficient results.
+ <i>
+ 1.The prediction model is deployed on cloud. 
+ 2.The analysis is made with 2 years datasets.

@@ -17,13 +17,20 @@
  a) Is the flight delayed or not? - This is predicted using <b>Naive Bayes classification</b> algorithm with a accuracy score of 96%.<br>
    b) How much is the flight delayed at the origin airport and what is the arrival delay? - Predicted using <b>RandomForestRegressor </b>withe r2 score of 99%.<br>
    c) What type of delay is it ? - There are four delays [Carrier delay , Security delay , Weather delay , NAS delay] . This is predicted using <b>RandomForestClassifier</b> with accuracy of 89%.<br>
- d) Deployed the app using Flask on the id : http://ec2-54-69-18-165.us-west-2.compute.amazonaws.com/<br>
- e) Working on the app building on agile basis.
+ d)  Working on the app building on agile basis.
  </i>
  
  ## WEEK 3 :
  <i>
- 1.The prediction model is deployed on cloud (EC2 instance - http://54.69.18.165:8888 through ssh terminal). <br>
- 2.The models are pickled an dthe pickled files are pushed to s3 bucket.<br>
- 3.The python script is dockerized and the image will be pulled from a EC2 instance.<br>
+ 1. We shifted from AWS Cloud to Google Cloud for storing our dataset. And now we are fetching our dataset from GCP.
+ 2. Added some more years of data in the dataset to get more insight and better classification results.
+ 3.The prediction model pipeline which was running on local previously is now deployed on AWS cloud up and running on EC2 instance - http://54.69.18.165:8888 through ssh terminal. <br>
+ 4.Pickel files of all the three classification models used for all three classifications:
+ a. Delayed or not (https://s3.amazonaws.com/dhanisha/delay.pkl)
+ b. Category of delay (https://s3.amazonaws.com/dhanisha/delay_type.pkl)
+ c. Average departure or Arrival Delay (https://s3.amazonaws.com/dhanisha/delay_value.pkl)
+ are pushed to s3 bucket.<br>
+ 3.The python script is dockerized and the image will be pulled from a EC2 instance.
+ 4. On Front-End, A fully developed Web App for the user to use with authentication via Login using Flask is deployed on the EC instance up and running on ec2-54-69-18-165.us-west-2.compute.amazonaws.com (Working on adding more functionalites for the user)
+ 5. Trying to implement Dask and bokeh. <br>
 </i>

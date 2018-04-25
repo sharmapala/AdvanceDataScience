@@ -804,7 +804,7 @@ args = parser.parse_args()
 Access_key = args.Access_key
 Secret_key = args.Secret_key
 
-buck_name="ads"#enter bucket name
+buck_name="dhanisha"#enter bucket name
 
 S3_client = boto3.client('s3', Input_location, aws_access_key_id= Access_key, aws_secret_access_key= Secret_key)
 

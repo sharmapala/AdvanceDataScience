@@ -22,15 +22,16 @@
  
  ## WEEK 3 :
  <i>
- 1. We shifted from AWS Cloud to Google Cloud for storing our dataset. And now we are fetching our dataset from GCP.
- 2. Added some more years of data in the dataset to get more insight and better classification results.
- 3.The prediction model pipeline which was running on local previously is now deployed on AWS cloud up and running on EC2 instance - http://54.69.18.165:8888 through ssh terminal. <br>
- 4.Pickel files of all the three classification models used for all three classifications:
- a. Delayed or not (https://s3.amazonaws.com/dhanisha/delay.pkl)
- b. Category of delay (https://s3.amazonaws.com/dhanisha/delay_type.pkl)
+ <b>
+ 1. We shifted from AWS Cloud to Google Cloud for storing our dataset. And now we are fetching our dataset from GCP.<br>
+ 2. Added some more years of data in the dataset to get more insight and better classification results.</b><br>
+ 3.The prediction model pipeline which was running on local previously is now deployed on AWS cloud up and running on EC2 instance - http://54.69.18.165:8888 through ssh terminal. </b><br>
+ 4.Pickel files of all the three classification models used for all three classifications:</b><br>
+ a. Delayed or not (https://s3.amazonaws.com/dhanisha/delay.pkl)</b><br>
+ b. Category of delay (https://s3.amazonaws.com/dhanisha/delay_type.pkl)</b><br>
  c. Average departure or Arrival Delay (https://s3.amazonaws.com/dhanisha/delay_value.pkl)
- are pushed to s3 bucket.<br>
- 3.The python script is dockerized and the image will be pulled from a EC2 instance.
- 4. On Front-End, A fully developed Web App for the user to use with authentication via Login using Flask is deployed on the EC instance up and running on ec2-54-69-18-165.us-west-2.compute.amazonaws.com (Working on adding more functionalites for the user)
- 5. Trying to implement Dask and bokeh. <br>
+ are pushed to s3 bucket.</b><br>
+ 3.The python script is dockerized and the image will be pulled from a EC2 instance.</b><br>
+ 4. On Front-End, A fully developed Web App for the user to use with authentication via Login using Flask is deployed on the EC instance up and running on ec2-54-69-18-165.us-west-2.compute.amazonaws.com (Working on adding more functionalites for the user)</b><br>
+ 5. Trying to implement Dask and bokeh.</b>
 </i>

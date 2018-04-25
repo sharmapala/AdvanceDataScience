@@ -23,6 +23,7 @@
  
  ## WEEK 3 :
  <i>
- 1.The prediction model is deployed on cloud. <br>
- 2.The analysis is made with 2 years datasets.
+ 1.The prediction model is deployed on cloud (EC2 instance - http://54.69.18.165:8888 through ssh terminal). <br>
+ 2.The models are pickled an dthe pickled files are pushed to s3 bucket.<br>
+ 3.The python script is dockerized and the image will be pulled from a EC2 instance.<br>
 </i>

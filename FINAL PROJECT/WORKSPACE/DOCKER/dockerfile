@@ -1,1 +1,23 @@
+FROM continuumio/anaconda
+FROM python:3
 
+RUN mkdir -p /usr/src/assign3
+WORKDIR /usr/src/assign3
+
+RUN pip install pandas
+RUN pip install boto3
+RUN pip install numpy 
+RUN pip install urllib3
+RUN pip install bs4
+RUN pip install scipy 
+RUN pip install scikit-learn
+RUN pip install sklearn
+RUN pip install boto
+RUN pip install argparse
+
+ENV Access_key 1
+ENV Secret_key 1
+
+COPY assign_3.py /usr/src/assign3/
+
+CMD ["sh","-c","python /usr/src/assign3/assign_3.py --Access_key ${Access_key} --Secret_key ${Secret_key}"]

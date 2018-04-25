@@ -1,8 +1,8 @@
 FROM continuumio/anaconda
 FROM python:3
 
-RUN mkdir -p /usr/src/assign3
-WORKDIR /usr/src/assign3
+RUN mkdir -p /usr/src/finalproject
+WORKDIR /usr/src/finalproject
 
 RUN pip install pandas
 RUN pip install boto3
@@ -18,6 +18,6 @@ RUN pip install argparse
 ENV Access_key 1
 ENV Secret_key 1
 
-COPY assign_3.py /usr/src/assign3/
+COPY assign_3.py /usr/src/finalproject/
 
-CMD ["sh","-c","python /usr/src/assign3/assign_3.py --Access_key ${Access_key} --Secret_key ${Secret_key}"]
+CMD ["sh","-c","python /usr/src/finalproject/final-project.py --Access_key ${Access_key} --Secret_key ${Secret_key}"]

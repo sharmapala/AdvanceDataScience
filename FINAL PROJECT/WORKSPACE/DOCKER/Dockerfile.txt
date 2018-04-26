@@ -1,0 +1,14 @@
+<<For dockerizing the app on ec2 instance, along with requirements this file is also required>>
+
+
+FROM ubuntu:14.04
+
+MAINTAINER <<Palak>>
+RUN apt-get update -y && \
+        apt-get install -y python-pip python-dev
+COPY ./requirements.txt /app/requirements.txt
+WORKDIR /app
+RUN pip install -r requirements.txt
+COPY . /app
+ENTRYPOINT ["python"]
+CMD ["__init__.py"]

@@ -33,5 +33,6 @@
  are pushed to s3 bucket.</b><br>
  3.The python script is dockerized and the image will be pulled from a EC2 instance.</b><br>
  4. On Front-End, A fully developed Web App for the user to use with authentication via Login using Flask is deployed on the EC instance up and running on ec2-18-236-73-140.us-west-2.compute.amazonaws.com (Working on adding more functionalites for the user)</b><br>
- 5. Trying to implement Dask and bokeh.</b>
+ 5. Trying to implement Dask and bokeh.</b><b>
+ 6. RESTAPIs are used to make the web App more user friendly.</b>
 </i>

@@ -1,0 +1,3 @@
+<<The following file consists of the flask version you are working on>>
+
+flask==0.12.1

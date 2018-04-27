@@ -10,13 +10,13 @@
        docker run -e Access_key=Access_key -e Secret_key=Secret_key -ti finalproject
        
   TO TAG THE IMAGE 
-       docker tag <image id> dhanisha/finalproject
+       docker tag <image id> sharmapala/finalproject
        
   TO PUSH THE DOCKER IMAGE TO DOCKER HUB
-       docker push dhanisha/finalproject
+       docker push sharmapala/finalproject
        
   TO PULL THE DOCKER IMAGE FROM THE DOCKER HUB
-       docker pull dhanisha/finalproject
+       docker pull sharmapala/finalproject
        
   TO RUN THE IMAGE PULLED FROM DOCKER HUB 
        docker run -e Access_key=Access_key -e Secret_key=Secret_key -ti finalproject

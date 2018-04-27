@@ -852,18 +852,18 @@ buck_name="team3"#enter bucket name
 Input_location = 'us-west-2'
 S3_client = boto3.client('s3', Input_location, aws_access_key_id= Access_key, aws_secret_access_key= Secret_key)
 
-if Input_location == 'us-east-1':
-        S3_client.create_bucket(
-            Bucket=buck_name
-        )
-else:
-    S3_client.create_bucket(
-            Bucket=buck_name,
-            CreateBucketConfiguration={'LocationConstraint': Input_location},
-        )
+#if Input_location == 'us-east-1':
+#        S3_client.create_bucket(
+#            Bucket=buck_name
+#        )
+#else:
+#    S3_client.create_bucket(
+#            Bucket=buck_name,
+#            CreateBucketConfiguration={'LocationConstraint': Input_location},
+#        )
 
 S3_client.upload_file('delay.pkl', buck_name, 'delay.pkl')
 S3_client.upload_file('delay_value.pkl', buck_name, 'delay_value.pkl')
-S3_client.upload_file('delay_type.pkl', buck_name, 'delay_type.pkl')
-S3_client.upload_file('delay_type.pkl', buck_name, 'delay_type_value.pkl')
+#S3_client.upload_file('delay_type.pkl', buck_name, 'delay_type.pkl')
+S3_client.upload_file('delay_type_value.pkl', buck_name, 'delay_type_value.pkl')
 

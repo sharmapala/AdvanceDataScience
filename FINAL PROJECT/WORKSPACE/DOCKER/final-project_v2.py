@@ -852,7 +852,7 @@ buck_name="team3"#enter bucket name
 Input_location = 'us-west-2'
 S3_client = boto3.client('s3', Input_location, aws_access_key_id= Access_key, aws_secret_access_key= Secret_key)
 
-if Input_location == 'us-west-2':
+if Input_location == 'us-east-1':
         S3_client.create_bucket(
             Bucket=buck_name
         )

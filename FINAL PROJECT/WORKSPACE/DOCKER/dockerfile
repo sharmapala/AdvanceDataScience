@@ -1,4 +1,4 @@
-FROM continuumio/anaconda
+FROM ubuntu:14.04
 FROM python:3
 
 RUN mkdir -p /usr/src/finalproject
@@ -18,6 +18,6 @@ RUN pip install argparse
 ENV Access_key 1
 ENV Secret_key 1
 
-COPY assign_3.py /usr/src/finalproject/
+COPY fial-project_v2.py /usr/src/finalproject/
 
 CMD ["sh","-c","python /usr/src/finalproject/final-project.py --Access_key ${Access_key} --Secret_key ${Secret_key}"]

@@ -20,4 +20,4 @@ ENV Secret_key 1
 
 COPY fial-project_v2.py /usr/src/finalproject/
 
-CMD ["sh","-c","python /usr/src/finalproject/final-project.py --Access_key ${Access_key} --Secret_key ${Secret_key}"]
+CMD ["sh","-c","python /usr/src/finalproject/final-project_v2.py --Access_key ${Access_key} --Secret_key ${Secret_key}"]

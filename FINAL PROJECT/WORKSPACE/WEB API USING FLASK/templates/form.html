@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Predict Airline delay App</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">-->
+        <!-- Custom styles for this template -->
+    <!-- <link href="jumbotron-narrow.css" rel="stylesheet">-->
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		
+    <link href="https://getbootstrap.com/docs/3.3/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="/static/css/signup.css" rel="stylesheet">
+    <style>
+	.left-td{
+	text-align:right;
+	font-size: 15px;
+	}
+	
+	.right-td{
+	text-align:left;
+	font-size: 15px;
+	padding-left: 15px;
+    padding-bottom: 15px;
+	}
+	</style>
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+
+        <div class="header" >
+            <h2 class="text-muted">PDP Aireline Delay Predicting Application</h2>
+        </div>
+ 
+      <div style="left:80px; top:-55px;">
+        <form action='/predict' class="form-signin" method="POST">
+        <table>
+            <tr>
+            <td class="left-td"> Select Origin:   </td>
+            <td class="right-td"><select name="origin">
+            {% for row in origin %}
+                <option value={{row[1]}}>{{row[0]}}</option>
+            {% endfor %}
+            
+            </select>
+            </td>
+            <tr>
+            <td class="left-td">
+            Select Destination:   </td>
+            <td class="right-td"><select name="dest">
+            {% for row in dest %}
+                <option value={{row[1]}}>{{row[0]}}</option>
+            {% endfor %}
+           
+            </select></td></tr>
+            <hr>
+            <tr>
+			<td class="left-td">Select Airline :</td>
+			<td class="right-td">
+			<select name="unique_carrier">
+            {% for row in uniqC %}
+                <option value={{row[1]}}>{{row[0]}}</option>
+            {% endfor %}
+           
+            </select>
+			</td>
+			
+			</tr>
+			<tr>
+			<td class="left-td">Date of Travel (YYYY-MM-DD):</td>
+			<td class="right-td"></td>
+			</tr>
+			
+			<tr>
+			<td class="left-td">Year</td>
+			<td class="right-td"><input type="number" name="year"/></td>
+			</tr>
+			
+			<tr>
+			<td class="left-td">Month</td>
+			<td class="right-td"><input type="number" name="month"/></td>
+			</tr>
+			
+			<tr>
+			<td class="left-td">Day</td>
+			<td class="right-td"><input type="number" name="day"/></td>
+			</tr>
+			
+			<tr>
+			<td class="left-td">Day of Week</td>
+			<td class="right-td"><input type="number" name="dayofweek"/></td>
+			</tr>
+			
+			<tr>
+			<td class="left-td">Select Departure HOUR:</td>
+			<td class="right-td"><select name="dep_hour">
+            <option value=0>00:00</option>
+            <option value=1>01:00</option>
+            <option value=2>02:00</option>
+            <option value=3>03:00</option>
+            <option value=4>04:00</option>
+            <option value=5>05:00</option>
+            <option value=6>06:00</option>
+            <option value=7>07:00</option>
+            <option value=8>08:00</option>
+            <option value=9>09:00</option>
+            <option value=10 selected>10:00</option>
+            <option value=11>11:00</option>
+            
+        </select></td>
+			</tr>
+			
+			<tr>
+			<td class="left-td">Select Arrival HOUR:</td>
+			<td class="right-td"><select name="arr_hour">
+        <option value=0>00:00</option>
+        <option value=1>01:00</option>
+        <option value=2>02:00</option>
+        <option value=13 selected>13:00</option>
+        <option value=14>14:00</option>
+   
+    </select></td>
+			</tr>
+		
+		</table>
+
+     <p> <input type ="submit" value="submit" /> </p>
+    </form>
+      </div>       
+ 
+      <footer class="footer">
+        <p>&copy; Company 2018</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>

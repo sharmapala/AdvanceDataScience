@@ -6,7 +6,8 @@
  2. Tried cloudera and Hortonworks sandbox but due to technical difficulties it didn't boot up in our system.<br>
  3.However we uploaded the file to hdfs from cloudera terminal , but pulling it from the HDFS was difficult.<br>
  Thus we changed the method of implementation of the project. </i><br>
- ### STEP 1:
+ 
+ ### STEP 1:<br>
  #### <b>EXPLORATORY DATA ANALYSIS :</b>
  <i>
  1.The dataset is uploaded to the <b>SQL server</b>.<br>

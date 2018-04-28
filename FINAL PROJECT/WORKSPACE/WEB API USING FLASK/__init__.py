@@ -12,6 +12,8 @@ from flask import flash
 from flask_mysqldb import MySQL
 from flask import Markup
 import urllib
+import bokeh
+from bokeh.plotting import figure
 from urllib.request import Request, urlopen
 
 #place holder for module

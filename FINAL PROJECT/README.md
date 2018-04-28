@@ -1,5 +1,11 @@
 # PREDICTING AIRLINE DELAYS 
  ## WEEK 1 :
+ ### DIFFICULTIES :
+ <i>
+ 1. Initially in the projetc proposal , we had proposed that spark will be included but later when we started working on the project , setting up of the cluster was very difficult.<br>
+ 2. Tried cloudera and Hortonworks sandbox but due to technical difficulties it didn't boot up in our system.<br>
+ 3.However we uploaded the file to hdfs from cloudera terminal , but pulling it from the HDFS was difficult.<br>
+ Thus we changed the method of implementation of the project.
  ### STEP 1:
  #### <b>EXPLORATORY DATA ANALYSIS :</b>
  <i>

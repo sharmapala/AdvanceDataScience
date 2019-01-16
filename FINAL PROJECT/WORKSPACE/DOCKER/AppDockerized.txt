@@ -1,0 +1,18 @@
+For dockerizing the Flask App un and running on EC2 instance 
+
+Create two txt files in the same directory where the __init__.py file is present.
+In this case :
+/var/www/FlaskApp/FlaskApp/
+
+1. requirements.txt 
+2. dockerfile.txt
+
+using the below commands
+nano requirements
+nano dockerfile
+
+(The actual files are attached in the folder)
+
+After adding the files run the command:
+
+docker build -t flask-image:latest

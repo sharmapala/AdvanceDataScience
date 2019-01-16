@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Predict Airline delay App</title>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/3.3/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="/static/css/signup.css" rel="stylesheet">
+        
+  </head>
+ 
+  <body>
+ 
+     <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="/"><a href="#">Home</a>
+                    </li>
+                    <li role="presentation"><a href="active">Sign In</a>
+                    </li>
+                    <li role="presentation"><a href="/showSignUp">Sign Up</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">DPD Airline Delay Prediction Application</h3>
+        </div>
+   
+    <h2>Sign In</h2>
+			<br>
+  			<form action="/validatelogin" class="form-signin" method="post">
+  				<label for="inputName" class="sr-only">Username </label>
+    			<input type="text" placeholder="Username" class="form-control" name="username" value ="">
+    			<label for="inputName" class="sr-only">Password</label>
+    			<input type="password" placeholder="Password" class="form-control" name="password" value ="">
+    			<input class="btn btn-default" type="submit" value="Login">
+  			</form>
+			{% if error %}
+				<p class="error"><strong>Error:</strong> {{ error }} </p>
+			{% endif %}
+      </div>       
+ 
+      <footer class="footer">
+        <p>&copy; Company 2018</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>

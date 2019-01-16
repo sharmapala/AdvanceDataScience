@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Predict Airline delay App</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">-->
+        <!-- Custom styles for this template -->
+    <!-- <link href="jumbotron-narrow.css" rel="stylesheet">-->
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../static/w3.css">
+	<link rel="stylesheet" href="../static/font-awesome.min.css">
+	<link rel="stylesheet" href="../static/css.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='font-awesome.min.css') }}">
+    <link href="https://getbootstrap.com/docs/3.3/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css" rel="stylesheet" type="text/css">
+	<link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.6.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/signup.css" rel="stylesheet">
+    <style>
+	html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+  }
+	</style>
+  </head>
+ 
+<body>
+ <div class="w3-main">
+ 
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Log out</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">DPD Airline delay Prediction App</h3>
+      </div>
+     <div>
+	  
+	<header class="w3-container" style="padding-top:22px">
+    <h5><b> Overview for Route: </b></h5>
+  </header>
+	<div class="w3-row-padding w3-margin-bottom">
+	
+	<div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left></div>
+        <div class="w3-right">
+          <h3> <p class="predict">{{ predict }} </p></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h6>Flight Status:</h6>
+		<i>(more than 15 minutes)</i>
+      </div>
+      
+    </div>
+	
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-left"></i></div>
+        <div class="w3-right">
+          <h3> <p class="predict">{{ arrival_delay }} </p></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h6>Average Arrival Delay</h6>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16">
+        <div class="w3-left"></i></div>
+        <div class="w3-right">
+          <h3><p class="predict"> {{ departure_delay  }} </p></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h6>Average Departure Delay</h6>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"></i></div>
+        <div class="w3-right">
+          <h3><p class="predict">{{ carrier_delay }} </p></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h6>Carrier Delay:</h6>
+      </div>
+    </div>
+</div>
+
+<div class="w3-row-padding w3-margin-bottom">
+	<div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"></i></div>
+        <div class="w3-right">
+          <h3><p class="predict">{{ weather_delay }} </p> </h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h6>Weather Delay:</h6>
+      </div>
+    </div>
+	
+	<div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"></i></div>
+        <div class="w3-right">
+          <h3> <p class="predict">{{ NAS_delay }} </p></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h6>NAS Delay:</h6>
+      </div>
+    </div>
+	
+	<div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"></i></div>
+        <div class="w3-right">
+          <h3> <p class="predict"> {{ security_delay }} </p></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h6>Security Delay:</h6>
+      </div>
+    </div>
+	
+	<div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"></div>
+        <div class="w3-right">
+          <h3> <p class="predict">{{ late_aircraft_delay }} </p> </h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h6>Late Aircraft Delay:</h6>
+      </div>
+    </div>
+</div>
+
+
+<div class="container text-center">    
+  
+  <div class="w3-row-padding" style="margin:0 -16px; margin-top: 15px;">
+      <img src="..\static\images\fda1.png" class="img-responsive" style="height: 400px; width: 600px; border: solid; border-radius: 1.5em;" alt="Image">
+    </div>
+    <div class="w3-row-padding" style="margin:0 -16px; margin-top: 25px;"> 
+      <img src="..\static\images\fda2.png" class="img-responsive" style="height: 400px; width: 600px; border: solid; border-radius: 1.5em;" alt="Image">
+    </div>
+	<div class="w3-row-padding" style="margin:0 -16px; margin-top: 25px;"> 
+      <img src="..\static\images\fda3.png" class="img-responsive" style="height: 400px; width: 600px; border: solid; border-radius: 1.5em;" alt="Image">
+    </div>
+	
+  </div>
+</div><br>
+
+      <footer class="footer">
+        <p>&copy; Company 2018</p>
+      </footer>
+
+    </div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+FROM ubuntu:14.04
+FROM python:3
+
+RUN mkdir -p /usr/src/finalproject
+WORKDIR /usr/src/finalproject
+
+RUN pip install pandas
+RUN pip install boto3
+RUN pip install numpy 
+RUN pip install urllib3
+RUN pip install bs4
+RUN pip install scipy 
+RUN pip install scikit-learn
+RUN pip install sklearn
+RUN pip install boto
+RUN pip install argparse
+
+ENV Access_key 1
+ENV Secret_key 1
+
+COPY fial-project_v2.py /usr/src/finalproject/
+
+CMD ["sh","-c","python /usr/src/finalproject/final-project_v2.py --Access_key ${Access_key} --Secret_key ${Secret_key}"]

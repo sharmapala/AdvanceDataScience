@@ -1,4 +1,4 @@
-# Machine Learning with Engergy Dataset
+# Machine Learning with Energy Dataset
 
 <ol>
 <li><b>Exploratory Data Analysis : Conduced an exploratory data analysis using Python packages (plotly, seaborn, matplotlib etc.) to
